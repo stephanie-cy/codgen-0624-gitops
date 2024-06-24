@@ -1,0 +1,6 @@
+apiVersion: "pipelinesascode.tekton.dev/v1alpha1"
+kind: Repository
+metadata:
+  name: codgen-0624-gitops-repository
+spec:
+  url: https://github.com/stephanie-cy/codgen-0624-gitops
