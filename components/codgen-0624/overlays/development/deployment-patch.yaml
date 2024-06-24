@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
-metadata:   
-  annotations:  
+metadata:
+  annotations:
     tad.gitops.set/image: ".spec.template.spec.containers[0].image"
     tad.gitops.get/image: ".spec.template.spec.containers[0].image"
     tad.gitops.set/replicas: ".spec.replicas"
-    tad.gitops.get/replicas: ".spec.replicas" 
+    tad.gitops.get/replicas: ".spec.replicas"
   name: codgen-0624
 spec:
-  replicas: 1 
-  template: 
+  replicas: 1
+  template:
     spec:
       containers:
-      - image: quay.io/redhat-ai-dev/codegen:latest # use pre-built to bootstrap 
-        name: app-inference 
+        - image: quay.io/yangcao/codgen-0624:545bc6017dea654ca448b7c00d77707835c47c7c@sha256:73e18713305b1d6d566082bef18e8c0f4e45b406360cc0ba059fe0827f7af566 # use pre-built to bootstrap 
+          name: app-inference
